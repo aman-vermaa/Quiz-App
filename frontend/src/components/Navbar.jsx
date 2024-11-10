@@ -10,9 +10,13 @@ const Navbar = () => {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   const dispatch = useDispatch();
   const sendReq = async () => {
-    const res = await axios.post("http://localhost:5000/api/logout", null, {
-      withCredentials: true,
-    });
+    const res = await axios.post(
+      "https://quiz-app-l6nc.onrender.com/api/logout",
+      null,
+      {
+        withCredentials: true,
+      }
+    );
     if (res.status == 200) {
       return res;
     }

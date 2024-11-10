@@ -28,7 +28,10 @@ const Login = () => {
         email: data.email,
         password: data.password,
       };
-      const res = await axios.post("http://localhost:5000/api/login", userData);
+      const res = await axios.post(
+        "https://quiz-app-l6nc.onrender.com/api/login",
+        userData
+      );
       const result = await res.data;
       return result;
     } catch (error) {

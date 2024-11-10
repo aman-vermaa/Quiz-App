@@ -30,7 +30,7 @@ const Signup = () => {
         password: data.password,
       };
       const res = await axios
-        .post("http://localhost:5000/api/signup", userData)
+        .post("https://quiz-app-l6nc.onrender.com/api/signup", userData)
         .catch((e) => console.log(e));
       const result = await res.data;
       return result;

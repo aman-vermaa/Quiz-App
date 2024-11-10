@@ -37,7 +37,7 @@ const Create = () => {
         topics,
       };
       const res = await axios.post(
-        "http://localhost:5000/api/createQuiz",
+        "https://quiz-app-l6nc.onrender.com/api/createQuiz",
         quiz
       );
       console.log(res.data);

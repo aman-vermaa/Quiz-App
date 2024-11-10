@@ -26,9 +26,12 @@ const dashboard = () => {
 
   const sendRequest = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/user", {
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        "https://quiz-app-l6nc.onrender.com/api/user",
+        {
+          withCredentials: true,
+        }
+      );
       if (res.status == 400) {
         dispatch(logout());
         navigate("/login");
@@ -45,7 +48,7 @@ const dashboard = () => {
       setUser(data);
       const quizReq = data.quizzes.map(async (id) => {
         const res = await axios.get(
-          `http://localhost:5000/api/quizzes?id=${id}&dashboard=true`
+          `https://quiz-app-l6nc.onrender.com/api/quizzes?id=${id}&dashboard=true`
         );
         return res.data;
       });
