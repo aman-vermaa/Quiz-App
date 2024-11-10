@@ -9,6 +9,9 @@ import Home from "./pages/Home";
 import Layout from "./layout/MainLayout";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import axios from "axios";
+
+axios.defaults.withCredentials = true;
 
 function App() {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);

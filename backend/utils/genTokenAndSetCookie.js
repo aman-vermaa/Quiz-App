@@ -10,6 +10,7 @@ const genTokenAndSetCookie = (user, res) => {
     expires: new Date(Date.now() + 1000 * 60 * 60 * 24 * 10),
     httpOnly: true,
     sameSite: "lax",
+    secure: process.env.NODE_ENV === "production",
   });
 };
 
