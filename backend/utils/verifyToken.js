@@ -17,7 +17,9 @@ const verifyToken = async (req, res, next) => {
       next();
     });
   } catch (error) {
-    return res.status(500).json({ msg: "Unexpected error Occured" });
+    return res
+      .status(500)
+      .json({ msg: "Unexpected error Occured", error: error.message });
   }
 };
 
