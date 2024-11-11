@@ -11,6 +11,7 @@ const genTokenAndSetCookie = (user, res) => {
     httpOnly: true,
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
+    domain: "quiz-app-murex-six.vercel.app",
   });
 };
 
